@@ -1,8 +1,10 @@
 <h2>Products</h2>
 
-<div *ngFor="let product of products">
+<!-- Update the *ngFor directive to assign each index in the products array to the productId variable when iterating over the list. -->
+<div *ngFor="let product of products; index as productId">
   <h3>
-      <a [title]="product.name + ' details'">
+    <!-- Modify the product name anchor to include a routerLink directive. -->
+      <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
         {{ product.name }}
       </a>
   </h3>
