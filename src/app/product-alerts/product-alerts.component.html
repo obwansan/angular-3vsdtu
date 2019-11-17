@@ -1,4 +1,5 @@
-<!-- product is accessible because [product]='product' passed it in in product-list.component.html -->
+<!-- The product property is accessible because [product]='product' in product-list.component.html passed it. -->
+<!-- The notify property is accessible because the ProductAlertsComponent outputs it to it's parent ProductListComponent. It's therefore available in pproduct-list.component.html, and can be passed into the ProductAlertsComponent template via the selector <app-product-alerts>.  -->
 <p *ngIf="product.price > 700">
-  <button>Notify Me</button>
+  <button (click)="notify.emit()">Notify Me</button>
 </p>

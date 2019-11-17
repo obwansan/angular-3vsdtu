@@ -15,7 +15,10 @@
 
   <!-- To include the new component, use its selector, app-product-alert, as you would an HTML element. -->
   <!-- Pass the current product as input to the component using property binding. Similar to passing props in React. -->
-  <app-product-alerts [product]='product'>
+  <!-- Bind the onNotify() method in product-list.component.ts to the notify property outputted (passed) to ProductAlertsComponent. -->
+  <app-product-alerts 
+    [product]='product'
+    (notify)="onNotify()">
   </app-product-alerts>
 
 </div>
